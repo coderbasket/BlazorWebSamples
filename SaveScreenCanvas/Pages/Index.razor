@@ -9,11 +9,12 @@ Welcome to your new app.
 <SurveyPrompt Title="How is Blazor working for you?" />
 <div>
     <canvas id="myCanvas"></canvas>
-
+    
     <br />
     <button type="button" class="btn btn-success" @onclick="putToCanvas">Screenshot to Canvas</button>
     <button type="button" class="btn btn-success" @onclick="DownloadScreenShot">Download Image</button>
     <button type="button" class="btn btn-success" @onclick="GetData">Get to y Blob</button>
+    
 </div>
 @code {
     private string data { get; set; }
@@ -33,5 +34,5 @@ Welcome to your new app.
         data = await js.InvokeAsync<string>("getData");
         StateHasChanged();
     }
-
+   
 }
